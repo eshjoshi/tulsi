@@ -1,11 +1,10 @@
 <mat-toolbar 
-  *ngIf="user"
   id="mainToolbar"
-  color="primary">
-  An Awesome Project
+  class="t-toolbar-bg">
+  Logo
   <span class="toolbar-spacer"></span>
-
-  <button
+  <button *ngIf="!user" routerLink="/login" mat-stroked-button color="primary">Login</button>
+  <button *ngIf="user"
     mat-mini-fab
     [matMenuTriggerFor]="avatarDropDown"
     class="toolbar-avatar"
@@ -14,8 +13,7 @@
   >
   </button>
 </mat-toolbar>
-
-<mat-menu
+<mat-menu 
   #avatarDropDown="matMenu">
   <mat-card>
     <mat-card-header>

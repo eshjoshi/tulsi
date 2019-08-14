@@ -1,2 +1,2 @@
-<h3 *ngIf="user">Welcome {{user?.displayName}}</h3>
-<button *ngIf="!user" (click)="loginGoogle()">Login with Google</button>
+<button mat-stroked-button color="primary"  class="t-login-button-center" *ngIf="!user" (click)="loginGoogle()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">Google</mat-icon>  Google</button>
