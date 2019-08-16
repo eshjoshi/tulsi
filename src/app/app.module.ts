@@ -12,6 +12,11 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './auth/login/login.component';
 import { MaterialModule } from './material-module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { CustomerDetailsComponent } from './customers/customer-details/customer-details.component';
+import { CustomersListComponent } from './customers/customers-list/customers-list.component';
+import { CreateCustomerComponent } from './customers/create-customer/create-customer.component';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     HomeComponent,
     LoginComponent,
     ToolbarComponent,
+    CustomerDetailsComponent,
+    CustomersListComponent,
+    CreateCustomerComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
