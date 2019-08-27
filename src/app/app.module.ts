@@ -17,6 +17,9 @@ import { CustomersListComponent } from './customers/customers-list/customers-lis
 import { CreateCustomerComponent } from './customers/create-customer/create-customer.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FormsModule } from '@angular/forms';
+import { InfoProductComponent } from './admin/info-product/info-product.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InfoProductService } from './admin/info-product.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     CustomerDetailsComponent,
     CustomersListComponent,
     CreateCustomerComponent,
+    InfoProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +41,10 @@ import { FormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InfoProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

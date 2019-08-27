@@ -1,4 +1,6 @@
 <!-- <app-landing-page></app-landing-page> -->
+{{message}}
 <app-toolbar></app-toolbar>
-<app-home></app-home>
+<app-home (childEvent)= "message=$event" [parentData] = "name"></app-home>
+<app-info-product></app-info-product>
 <router-outlet></router-outlet>

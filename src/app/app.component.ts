@@ -8,6 +8,8 @@ import {AngularFireAuth} from '@angular/fire/auth'
 })
 export class AppComponent implements OnInit {
   title = 'poc';
+  public name ={name:"eshwar", age:"28"};
+  public message= "";
   constructor(){
 
   }
